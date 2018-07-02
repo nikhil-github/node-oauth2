@@ -3,13 +3,13 @@
  * Provide values for your id,oauth url and secret
  */
 var request = require('request');
-var client_id = 'client-id';
-var client_secret = 'client-id-secret';
+var client_id = '{client-id}';
+var client_secret = '{client-secret}';
 var auth_string = new Buffer(client_id + ":" + client_secret).toString('base64'); // base64 encoded
 console.log(auth_string);
 request({
 	method: 'POST',
-    url: 'OAUTH2-URL',
+    url: '{OAUTH2-URL}',
 	headers: {
 		'Authorization': 'Basic ' + auth_string,
 		'Content-Type': 'application/x-www-form-urlencoded'
